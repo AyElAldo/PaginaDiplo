@@ -1,0 +1,125 @@
+/* --- Variables de Color y Fuentes --- */
+:root {
+    --bg-color: #12121c; /* Fondo oscuro */
+    --card-color: #1e1e2f; /* Color de las tarjetas */
+    --primary-text: #e0e0e0; /* Texto principal claro */
+    --secondary-text: #a0a0c0; /* Texto secundario más suave */
+    --accent-color: #00aaff; /* Color de acento vibrante */
+    --shadow-color: rgba(0, 170, 255, 0.1);
+    --font-main: 'Poppins', sans-serif;
+}
+
+/* --- Estilos Generales --- */
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* --- Encabezado --- */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #1e1e2f, #12121c);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 600;
+    color: #fff;
+}
+
+header p {
+    color: var(--secondary-text);
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* --- Estilos de Secciones --- */
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #2a2a4a;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- Diseño de Tarjetas para Amenazas --- */
+.amenazas-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap; /* Para que se adapte en móviles */
+}
+
+.card {
+    background-color: var(--card-color);
+    border-radius: 12px;
+    padding: 25px;
+    flex-basis: 250px; /* Ancho base de cada tarjeta */
+    flex-grow: 1;
+    border: 1px solid #2a2a4a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 1.4em;
+}
+
+.card p {
+    color: var(--secondary-text);
+}
+
+/* --- Lista de Buenas Prácticas --- */
+#buenas-practicas ul {
+    list-style: none;
+    padding: 0;
+}
+
+#buenas-practicas li {
+    background-color: var(--card-color);
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+#buenas-practicas li strong {
+    color: var(--primary-text);
+    font-weight: 600;
+}
+
+/* --- Pie de Página --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+    color: var(--secondary-text);
+    font-size: 0.9em;
+    background-color: #1e1e2f;
+}
